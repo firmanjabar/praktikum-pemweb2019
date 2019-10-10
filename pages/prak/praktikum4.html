@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Praktikum 4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
+	<link rel="stylesheet" type="text/css" href="../../assets/styles.css">
+</head>
+<body>
+	<div id="id">
+		<div class="menu_mobile">
+			<a href="#" onclick="showMenu()">Menu</a>
+		</div>
+		<div class="sidebar_mobile">
+			<a href="#" onclick="showSideBar()">SideBar</a>
+		</div>
+		<ul id="menu">
+		  <li><a href="../../index.html">Home</a></li>
+		  <li><a class="active" href="praktikum.html">Praktikum</a></li>
+		  <li><a href="../saran.html">Saran</a></li>
+		</ul>
+	</div>
+	<div id="id2">
+		<ul id="sidebar">
+		  <li><a href="praktikum.html">Praktikum1</a></li>
+		  <li><a href="#praktikum2.html">Praktikum2</a></li>
+		  <li><a href="#praktikum3.html">Praktikum3</a></li>
+		  <li><a class="active" href="praktikum4.html">Praktikum4</a></li>
+		</ul>
+	</div>
+
+	<div id="content" class="contentPrak">
+	    <h2>My Products</h2>
+	 
+	    <div class="thumbnail">
+	        <img src="https://picsum.photos/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://placeimg.com/250/150/any">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="https://picsum.photos/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://placeimg.com/250/150/any">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://lorempixel.com/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="https://loremflickr.com/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://lorempixel.com/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="https://loremflickr.com/250/150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+
+	    <div class="thumbnail">
+	        <img src="http://via.placeholder.com/250x150">
+	        <h2>Product 2</h2>
+	        <p>Rp 250.000</p>
+	    </div>
+	</div>
+
+	<div class="footer">
+		<caption>copyright Praktikum PemWeb - 2019</caption>
+	</div>
+
+<script>
+	function showMenu() {
+		var menu = document.getElementById("menu");
+		var box = document.getElementById("content");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+		}else{
+			menu.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+	function showSideBar() {
+		var menu = document.getElementById("sidebar");
+		var box = document.getElementById("contentPrak");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+		}else{
+			menu.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+</script>
+</body>
+</html>
