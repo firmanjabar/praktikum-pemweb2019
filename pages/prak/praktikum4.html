@@ -34,114 +34,11 @@
 	<div id="content" class="contentPrak">
 	    <h2>My Products</h2>
 	 
-	    <div class="thumbnail" onclick="myFunction()">
-	        <img src="https://picsum.photos/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
+	    <div id="card">
+	        
 	    </div>
-	    <dialog id="myDialog">This is a dialog window</dialog>
-
-	    <div class="thumbnail">
-	        <img src="http://placeimg.com/250/150/any">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="https://picsum.photos/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://placeimg.com/250/150/any">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://lorempixel.com/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="https://loremflickr.com/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://lorempixel.com/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="https://loremflickr.com/250/150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
-
-	    <div class="thumbnail">
-	        <img src="http://via.placeholder.com/250x150">
-	        <h2>Product 2</h2>
-	        <p>Rp 250.000</p>
-	    </div>
+	    <dialog id="myDialog">
+	    </dialog>
 	</div>
 
 	<div class="footer">
@@ -149,6 +46,31 @@
 	</div>
 
 <script>
+	var title = ["Joker", "The Lion King","Gemini Man", "IT: Chapter 2"];
+	var rating = ["8,7", "7,1", "5,9", "7"];
+	var desc = ["During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+		"Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+		"Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
+		"27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call."
+	];
+	var img = ["https://image.tmdb.org/t/p/w500/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg", 
+		"https://image.tmdb.org/t/p/w500/nRXO2SnOA75OsWhNhXstHB8ZmI3.jpg",
+		"https://image.tmdb.org/t/p/w500/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
+		"https://image.tmdb.org/t/p/w500/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
+	];
+	var text = "";
+	var i;
+	for (i = 0; i < title.length; i++) {
+	  text += `
+	  	<div class="thumbnail" onclick="myFunction(${i})">
+	  	<img src="${img[i]}">
+		<h2>${title[i]}</h2>
+		<p>Rating: ${rating[i]}</p>
+		</div>
+		`
+	}
+	document.getElementById("card").innerHTML = text;
+
 	function showMenu() {
 		var menu = document.getElementById("menu");
 		var box = document.getElementById("content");
@@ -167,15 +89,36 @@
 
 		if (menu.style.display === "block") {
 			menu.style.display = "none";
-			box.style.paddingTop = "0px";
 		}else{
 			menu.style.display = "block";
-			box.style.paddingTop = "125px";
 		}
 	}
 
-	function myFunction() { 
-	  document.getElementById("myDialog").showModal(); 
+	function myFunction(index) {
+		// console.log(index);
+		var title = ["Joker", "The Lion King","Gemini Man", "IT: Chapter 2"];
+		var rating = ["8,7", "7,1", "5,9", "7"];
+		var desc = ["During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+			"Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+			"Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
+			"27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call."];
+		var img = ["https://image.tmdb.org/t/p/w500/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg", 
+		"https://image.tmdb.org/t/p/w500/nRXO2SnOA75OsWhNhXstHB8ZmI3.jpg",
+		"https://image.tmdb.org/t/p/w500/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
+		"https://image.tmdb.org/t/p/w500/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
+		];
+		var text2 = "";
+
+		text2 += `
+	  	<div class="thumbnail" onclick="myFunction(${index})">
+	  	<img src="${img[index]}">
+		<h2>${title[index]}</h2>
+		<p>Rating: ${rating[index]}</p>
+		<caption>${desc[index]}</caption>
+		</div>
+		` 
+		document.getElementById("myDialog").innerHTML = text2;
+	  	document.getElementById("myDialog").showModal();
 	} 
 </script>
 </body>

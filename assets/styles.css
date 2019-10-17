@@ -201,4 +201,7 @@ div#id2 li a:hover:not(.active) {
   .thumbnail {
     width: 90%;
   }
+  .footer {
+    margin-left: 0px;
+  }
 }
