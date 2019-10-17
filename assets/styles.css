@@ -134,8 +134,15 @@ div#id2 li a:hover:not(.active) {
   width: 40%;
 }
 
+.textgonol{
+  font-size: 100px;
+}
+
 /*responsive for mobile*/
 @media (min-width: 321px) and (max-width: 425px){
+  .textgonol{
+    font-size: 20px;
+  }
   .imgCenter{
     width: 100%;
   }

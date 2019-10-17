@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Praktikum</title>
+	<title>Praktikum 4</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
 	<link rel="stylesheet" type="text/css" href="../../assets/styles.css">
@@ -22,28 +22,23 @@
 	</div>
 	<div id="id2">
 		<ul id="sidebar">
-		  <li><a class="active" href="praktikum.html">Praktikum1</a></li>
+		  <li><a href="praktikum.html">Praktikum1</a></li>
 		  <li><a href="#praktikum2.html">Praktikum2</a></li>
 		  <li><a href="#praktikum3.html">Praktikum3</a></li>
 		  <li><a href="praktikum4.html">Praktikum4</a></li>
 		  <li><a href="#praktikum5.html">Praktikum5</a></li>
-		  <li><a href="praktikum6.html">Praktikum6</a></li>
+		  <li><a class="active" href="praktikum6.html">Praktikum6</a></li>
 		</ul>
 	</div>
 
-	<div id="content" class ="contentPrak" style="height:1000px;">
-  <h2>Fixed Full-height Side Nav</h2>
-  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-</div>
+	<div id="content" class="contentPrak">
+	    <h2>My Products</h2>
+	 
+	    <input type="number" placeholder="Input Number 1" id="num1" />
+		<button type="button" onclick="checkHasil()">Check</button>
+		<div id="hasil"></div>
+
+	</div>
 
 <script>
 	function showMenu() {
@@ -70,6 +65,32 @@
 			box.style.paddingTop = "125px";
 		}
 	}
+
+	function checkHasil() {
+	let num1 = parseInt(document.getElementById("num1").value);
+	let simpan="";
+	let i=null;
+	// if( typeOf(num1) == undefined){
+	// 	document.getElementById("hasil").innerHTML = "";
+	// }else{
+		for (i=1; i<=num1; i++){
+
+			if (i % 3 === 0 && i % 5 === 0){
+				simpan += "<br>Fizz Buzz <br>";
+			}
+			else if (i % 3 === 0){
+				simpan += "<br>Fizz <br>";
+			}
+			else if (i % 5 === 0){
+				simpan += "<br>Buzz <br>";
+			}
+			else{
+				simpan += "<br>" + i + " (bukan kelipatan 3, 5, sama 3 & 5) <br>";
+			}
+		}
+		document.getElementById("hasil").innerHTML = simpan;
+	// }
+}
 </script>
 </body>
 </html>

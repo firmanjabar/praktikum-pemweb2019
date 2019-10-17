@@ -26,17 +26,20 @@
 		  <li><a href="#praktikum2.html">Praktikum2</a></li>
 		  <li><a href="#praktikum3.html">Praktikum3</a></li>
 		  <li><a class="active" href="praktikum4.html">Praktikum4</a></li>
+		  <li><a href="#praktikum5.html">Praktikum5</a></li>
+		  <li><a href="praktikum6.html">Praktikum6</a></li>
 		</ul>
 	</div>
 
 	<div id="content" class="contentPrak">
 	    <h2>My Products</h2>
 	 
-	    <div class="thumbnail">
+	    <div class="thumbnail" onclick="myFunction()">
 	        <img src="https://picsum.photos/250/150">
 	        <h2>Product 2</h2>
 	        <p>Rp 250.000</p>
 	    </div>
+	    <dialog id="myDialog">This is a dialog window</dialog>
 
 	    <div class="thumbnail">
 	        <img src="http://placeimg.com/250/150/any">
@@ -170,6 +173,10 @@
 			box.style.paddingTop = "125px";
 		}
 	}
+
+	function myFunction() { 
+	  document.getElementById("myDialog").showModal(); 
+	} 
 </script>
 </body>
 </html>
