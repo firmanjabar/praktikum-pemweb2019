@@ -8,6 +8,12 @@ body {
   display: none;
 }
 
+.sidebar_mobile{
+  position: relative;
+  float: right;
+  display: none;
+}
+
 .menu_mobile a{
   color: #fff;
   font-size: 14px;
@@ -17,11 +23,6 @@ body {
   border: 1px solid #ababab;
 }
 
-.sidebar_mobile{
-  position: relative;
-  float: right;
-  display: none;
-}
 
 .sidebar_mobile a{
   color: #fff;
