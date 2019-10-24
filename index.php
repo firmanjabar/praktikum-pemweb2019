@@ -1,3 +1,6 @@
+<?php
+$nama = "Firman Abdul Jabar"
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,7 @@
 	</div>
 
 	<div id="content" class="content">
-		<h2 style="text-align: center;">About Me</h2>
+		<h2 style="text-align: center;">About <?= $nama ?></h2>
 		<hr>
 		<img class="imgCenter" src="https://loremflickr.com/250/150">
 		<p>

@@ -74,47 +74,45 @@
 	function showMenu() {
 		var menu = document.getElementById("menu");
 		var box = document.getElementById("content");
+		var menu2 = document.getElementById("sidebar");
 
 		if (menu.style.display === "block") {
 			menu.style.display = "none";
 			box.style.paddingTop = "0px";
+			menu2.style.display = "none";
 		}else{
 			menu.style.display = "block";
-			box.style.paddingTop = "125px";
+			menu.style.position = "relative";
+			box.style.paddingTop = "150px";
+			menu2.style.display = "none";
 		}
 	}
 	function showSideBar() {
 		var menu = document.getElementById("sidebar");
-		var box = document.getElementById("contentPrak");
+		var box = document.getElementById("content");
+		var menu2 = document.getElementById("menu");
 
 		if (menu.style.display === "block") {
 			menu.style.display = "none";
+			menu2.style.display = "none";
 		}else{
 			menu.style.display = "block";
+			menu.style.position = "sticky";
+			menu2.style.display = "none";
+			box.style.paddingTop = "0px";
 		}
 	}
 
 	function myFunction(index) {
 		// console.log(index);
-		var title = ["Joker", "The Lion King","Gemini Man", "IT: Chapter 2"];
-		var rating = ["8,7", "7,1", "5,9", "7"];
-		var desc = ["During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
-			"Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
-			"Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
-			"27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call."];
-		var img = ["https://image.tmdb.org/t/p/w500/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg", 
-		"https://image.tmdb.org/t/p/w500/nRXO2SnOA75OsWhNhXstHB8ZmI3.jpg",
-		"https://image.tmdb.org/t/p/w500/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
-		"https://image.tmdb.org/t/p/w500/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
-		];
 		var text2 = "";
 
 		text2 += `
-	  	<div class="thumbnail" onclick="myFunction(${index})">
-	  	<img src="${img[index]}">
-		<h2>${title[index]}</h2>
-		<p>Rating: ${rating[index]}</p>
-		<caption>${desc[index]}</caption>
+	  	<div class="thumbnail">
+	  	<img src="${this.img[index]}">
+		<h2>${this.title[index]}</h2>
+		<p>Rating: ${this.rating[index]}</p>
+		<caption>${this.desc[index]}</caption>
 		</div>
 		` 
 		document.getElementById("myDialog").innerHTML = text2;
