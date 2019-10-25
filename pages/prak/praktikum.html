@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Praktikum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
+	<link rel="stylesheet" type="text/css" href="../../assets/styles.css">
+</head>
+<body>
+	<div id="id">
+		<div class="menu_mobile">
+			<a href="#" onclick="showMenu()">Menu</a>
+		</div>
+		<div class="sidebar_mobile">
+			<a href="#" onclick="showSideBar()">SideBar</a>
+		</div>
+		<ul id="menu">
+		  <li><a href="../../index.html">Home</a></li>
+		  <li><a class="active" href="praktikum.html">Praktikum</a></li>
+		  <li><a href="../saran.html">Saran</a></li>
+		</ul>
+	</div>
+	<div id="id2">
+		<ul id="sidebar">
+		  <li><a class="active" href="praktikum.html">Praktikum1</a></li>
+		  <li><a href="#praktikum2.html">Praktikum2</a></li>
+		  <li><a href="#praktikum3.html">Praktikum3</a></li>
+		  <li><a href="praktikum4.html">Praktikum4</a></li>
+		  <li><a href="#praktikum5.html">Praktikum5</a></li>
+		  <li><a href="praktikum6.html">Praktikum6</a></li>
+		  <li><a href="praktikum7.php">Praktikum7</a></li>
+		  <li><a href="praktikum71.php">Praktikum7.1</a></li>
+		</ul>
+	</div>
+
+	<div id="content" class ="contentPrak" style="height:1000px;">
+  <h2>Fixed Full-height Side Nav</h2>
+  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+</div>
+
+<script>
+	function showMenu() {
+		var menu = document.getElementById("menu");
+		var box = document.getElementById("content");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+		}else{
+			menu.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+	function showSideBar() {
+		var menu = document.getElementById("sidebar");
+		var box = document.getElementById("contentPrak");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+		}else{
+			menu.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+</script>
+</body>
+</html>
