@@ -114,12 +114,15 @@ $movie = array
 	</div>
 	<div id="id2">
 		<ul id="sidebar">
-		  <li><a href="praktikum.html">Praktikum1</a></li>
+		<li><a href="praktikum.html">Praktikum1</a></li>
 		  <li><a href="#praktikum2.html">Praktikum2</a></li>
 		  <li><a href="#praktikum3.html">Praktikum3</a></li>
-		  <li><a class="active" href="praktikum4.html">Praktikum4</a></li>
+		  <li><a href="praktikum4.html">Praktikum4</a></li>
 		  <li><a href="#praktikum5.html">Praktikum5</a></li>
 		  <li><a href="praktikum6.html">Praktikum6</a></li>
+		  <li><a href="praktikum7.php">Praktikum7</a></li>
+		  <li><a class="active" href="../praktikum8.php">Praktikum8</a></li>
+		  <li><a href="index.php">Praktikum9</a></li>
 		</ul>
 	</div>
 
@@ -142,7 +145,7 @@ $movie = array
 	    	<div class="modal-content">
 				<div class="modal-header">
 				    <span class="close">&times;</span>
-				    <h2>Deetail Movie</h2>
+				    <h2>Detail Movie</h2>
 				</div>
 				<div class="modal-body">
 				    <span id="cetak">

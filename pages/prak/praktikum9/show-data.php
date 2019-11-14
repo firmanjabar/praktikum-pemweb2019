@@ -13,7 +13,6 @@
         $location = $res["location"];
         $year = $res["year"];
         $email = $res["email"];
-
-        // echo "id: $id nama $nama";
+        $img = $res["img"];
     }
 ?>
