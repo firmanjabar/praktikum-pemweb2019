@@ -27,7 +27,7 @@ $col = $_GET["col"];
 			<a href="#" onclick="showSideBar()">SideBar</a>
 		</div>
 		<ul id="menu">
-		  <li><a href="../../index.html">Home</a></li>
+		  <li><a href="../../index.php">Home</a></li>
 		  <li><a class="active" href="praktikum.html">Praktikum</a></li>
 		  <li><a href="../saran.html">Saran</a></li>
 		</ul>
@@ -66,5 +66,38 @@ $col = $_GET["col"];
 	    </table>
 
 	</div>
+	<script>
+		function showMenu() {
+		var menu = document.getElementById("menu");
+		var box = document.getElementById("content");
+		var menu2 = document.getElementById("sidebar");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+			menu2.style.display = "none";
+		}else{
+			menu.style.display = "block";
+			menu.style.position = "relative";
+			box.style.paddingTop = "150px";
+			menu2.style.display = "none";
+		}
+	}
+	function showSideBar() {
+		var menu = document.getElementById("sidebar");
+		var box = document.getElementById("content");
+		var menu2 = document.getElementById("menu");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			menu2.style.display = "none";
+		}else{
+			menu.style.display = "block";
+			menu.style.position = "sticky";
+			menu2.style.display = "none";
+			box.style.paddingTop = "0px";
+		}
+	}
+	</script>
 </body>
 </html>
