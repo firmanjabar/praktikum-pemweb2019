@@ -1,7 +1,7 @@
 <?php
     include "koneksi.php";
 
-    $sql = "CREATE DATABASE profile2";
+    $sql = "CREATE DATABASE profile";
 
     if($koneksi->query($sql) === TRUE){
         echo "Db berhasil dibuat";
