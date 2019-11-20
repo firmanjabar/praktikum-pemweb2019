@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <?php
-	include "show-data.php";
+    include 'koneksi.php';
+
+    $id = $_GET['id'];
+    $profile = mysqli_query($koneksi, "SELECT * FROM user WHERE id = $id");
+    $profile = mysqli_fetch_assoc($profile);
+    // var_dump($profile);
 ?>
 <html>
 <head>
-	<title>Praktikum 6</title>
+	<title>Praktikum 9 - Edit Data</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../../assets/styles.css">
@@ -42,30 +47,50 @@
 	</div>
 
 	<div id="content" class="contentPrak">
-		<a href="insert-data.php" class="mt-4 btn btn-dark">Add Data</a>
-		<?php foreach($result as $res) :?>
-        <div class="mt-3 card bg-light">
-            <div class="row text-center p-3">
-                <div class="col-sm-12">
-                    <img width="200em" alt="img firman" src="<?= $res['img']?>"
-                        class="rounded-circle img-fluid">
-                </div>
-                <div class="col-sm-12">
-                    <hr>
-                    <h3><?= $res["nama"]?>, <span class="badge badge-info"><?= $res["age"]?>th</span></h3>
-                    <h6 class="mt-3"><?= $res["email"]?></h6>
-                    <h5 class="mt-3"><?= $res["role"]?>, <?= $res["year"]?> years</h5>
-                    <span class="blockquote-footer"><?= $res["available"]?></span>
-                    <b class="mt-3">(<?= $res["location"]?>)</b><br><br>
-					<!-- Button trigger modal -->
-					<a href="edit-data.php?id=<?= $res['id']?>" class="btn btn-primary">Edit Profile</a>
-					<a href="delete-data.php?id=<?= $res['id']?>" class="btn btn-danger">Delete Profile</a>
-                </div>
+        <h3 class="mt-4">Edit Data Profile</h3>
+        <form method="POST" action="edit-data-action.php">
+            <div class="form-group">
+                <!-- <label for="id">Id User</label> -->
+                <input value="<?= $id?>" type="hidden" class="form-control" id="id" name="id" aria-describedby="idUser">
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input value="<?= $profile['nama']?>" type="text" class="form-control" id="nama" name="nama" aria-describedby="namaUser">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input value="<?= $profile['role']?>" type="text" class="form-control" id="role" name="role" aria-describedby="role">
+            </div>
+            <div class="form-group">
+                <label for="available">Availableilty</label>
+                <input value="<?= $profile['available']?>" type="text" class="form-control" id="available" name="available" aria-describedby="available">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input value="<?= $profile['age']?>" type="text" class="form-control" id="age" name="age" aria-describedby="age">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input value="<?= $profile['location']?>" type="text" class="form-control" id="location" name="location" aria-describedby="location">
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input value="<?= $profile['year']?>" type="text" class="form-control" id="year" name="year" aria-describedby="year">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input value="<?= $profile['email']?>" type="text" class="form-control" id="email" name="email" aria-describedby="email">
+            </div>
+            <div class="form-group">
+                <label for="img">Photo Profile</label>
+                <input value="<?= $profile['img']?>" type="text" class="form-control" id="img" name="img" aria-describedby="img">
             </div>
         </div>
-		<?php endforeach;?>
-		<br>
-	</div>
+        <div class="modal-footer">
+            <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
+        </div>
+        </form>
+    </div>
 
 <script>
 

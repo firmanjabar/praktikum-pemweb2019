@@ -2,19 +2,19 @@ body {
   margin: 0;
 }
 
-.menu_mobile{
+.menu_mobile {
   position: relative;
   float: left;
   display: none;
 }
 
-.sidebar_mobile{
+.sidebar_mobile {
   position: relative;
   float: right;
   display: none;
 }
 
-.menu_mobile a{
+.menu_mobile a {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
@@ -24,7 +24,7 @@ body {
 }
 
 
-.sidebar_mobile a{
+.sidebar_mobile a {
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
@@ -42,6 +42,7 @@ div#id ul {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99 !important;
 }
 
 div#id li {
@@ -93,17 +94,18 @@ div#id2 li a:hover:not(.active) {
 }
 
 .contentPrak {
-  margin-left:25%;
-  margin-top:46px;
-  padding:1px 16px;
+  margin-left: 25%;
+  margin-top: 46px;
+  padding: 1px 16px;
   overflow: auto;
+  z-index: -20;
 }
 
 .content {
-  margin-left:10%;
+  margin-left: 10%;
   margin-right: 10%;
-  margin-top:46px;
-  padding:1px 16px;
+  margin-top: 46px;
+  padding: 1px 16px;
   overflow: auto;
 }
 
@@ -117,50 +119,55 @@ div#id2 li a:hover:not(.active) {
 }
 
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
 
 .footer {
-    background-color: #ccc;
-    min-height: 20px;
-    padding: 20px;
-    margin-left: 25%;
-    text-align: center;
+  background-color: #ccc;
+  min-height: 20px;
+  padding: 20px;
+  margin-left: 25%;
+  text-align: center;
 }
 
-.imgCenter{
+.imgCenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
 }
 
-.textgonol{
+.textgonol {
   font-size: 100px;
 }
 
 /*responsive for mobile*/
-@media (min-width: 321px) and (max-width: 425px){
-  .textgonol{
+@media (min-width: 321px) and (max-width: 425px) {
+  .textgonol {
     font-size: 20px;
   }
-  .imgCenter{
+
+  .imgCenter {
     width: 100%;
   }
-  .menu_mobile{
-    top:20px;
+
+  .menu_mobile {
+    top: 20px;
     left: 10%;
     display: inline-block;
   }
-  .sidebar_mobile{
-    top:20px;
+
+  .sidebar_mobile {
+    top: 20px;
     right: 10%;
     display: inline-block;
   }
-  div#id{
+
+  div#id {
     background-color: #333;
     height: 60px;
   }
+
   div#id ul {
     display: none;
     text-align: center;
@@ -168,12 +175,14 @@ div#id2 li a:hover:not(.active) {
     top: 43px;
     width: 100%;
   }
+
   div#id li {
     float: unset;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   div#id .active {
     background-color: #4CAF50;
   }
@@ -186,22 +195,23 @@ div#id2 li a:hover:not(.active) {
     width: 100%;
   }
 
-  div#id2 li{
+  div#id2 li {
     float: unset;
     margin: 0;
     padding-top: 10px;
   }
 
   .contentPrak {
-    margin-left:0%;
-    margin-top:46px;
-    padding:1px 16px;
+    margin-left: 0%;
+    margin-top: 46px;
+    padding: 1px 16px;
     overflow: auto;
   }
 
   .thumbnail {
     width: 90%;
   }
+
   .footer {
     margin-left: 0px;
   }

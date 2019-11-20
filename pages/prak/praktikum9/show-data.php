@@ -1,7 +1,7 @@
 <?php
     include "koneksi.php";
 
-    $sql = "SELECT * FROM user";
+    $sql = "SELECT * FROM user ORDER BY user.nama ASC";
     $result = $koneksi->query($sql);
 
     foreach($result as $res){
