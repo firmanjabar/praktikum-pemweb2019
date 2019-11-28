@@ -20,7 +20,7 @@
             exit();
         }
 
-        move_uploaded_file($img['tmp_name'],"img/$filename");
+        move_uploaded_file($img['tmp_name'],"../../praktikum9/img/$filename");
     }
 
     mysqli_query($koneksi, "INSERT INTO user

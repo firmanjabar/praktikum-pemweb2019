@@ -48,7 +48,7 @@
 
 	<div id="content" class="contentPrak">
         <h3 class="mt-4">Edit Data Profile</h3>
-        <form method="POST" action="edit-data-action.php">
+        <form method="POST" action="edit-data-action.php" enctype="multipart/form-data">
             <div class="form-group">
                 <!-- <label for="id">Id User</label> -->
                 <input value="<?= $id?>" type="hidden" class="form-control" id="id" name="id" aria-describedby="idUser">
@@ -81,13 +81,18 @@
                 <label for="email">E-mail</label>
                 <input value="<?= $profile['email']?>" type="text" class="form-control" id="email" name="email" aria-describedby="email">
             </div>
+			<div class="form-group">
+                <label for="password">Password</label>
+                <input value="<?= $profile['password']?>" type="password" class="form-control" id="password" name="password" aria-describedby="password">
+            </div>
             <div class="form-group">
-                <label for="img">Photo Profile</label>
-                <input value="<?= $profile['img']?>" type="text" class="form-control" id="img" name="img" aria-describedby="img">
+                <label for="img">Photo Profile</label><br>
+                <input value="<?= $profile['img']?>" type="file" id="img" name="img" aria-describedby="img">
             </div>
         </div>
         <div class="modal-footer">
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
+			<a href="./index.php" class="btn btn-secondary">Back</a>
+            <input type="submit" name="submit" value="Update" class="btn btn-primary" />
         </div>
         </form>
     </div>

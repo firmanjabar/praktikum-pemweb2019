@@ -9,7 +9,20 @@
     $location = $_POST['location'];
     $year = $_POST['year'];
     $email = $_POST['email'];
-    $img = $_POST['img'];
+    $pass = md5($_POST['password']);
+    
+    $img=$_FILES['img'];
+    if(isset($img)){
+        $ext=pathinfo($img['name'], PATHINFO_EXTENSION);
+        $filename=uniqid().'.'.$ext;
+
+        if($ext !== "jpg" && $ext !== "png"){
+            echo 'format tdk sesuai';
+            exit();
+        }
+
+        move_uploaded_file($img['tmp_name'],"img/$filename");
+    }
 
     mysqli_query($koneksi, "UPDATE user SET 
     nama = '$nama',
@@ -19,7 +32,8 @@
     location = '$location',
     year = '$year',
     email = '$email',
-    img = '$img' WHERE id = $id
+    password = '$pass',
+    img = '$filename' WHERE id = $id
     ");
 
     header('Location: index.php');
