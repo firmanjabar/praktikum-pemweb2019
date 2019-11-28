@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <?php
+	session_start();
+
 	include "show-data.php";
+
+	if(!isset($_SESSION['user'])){
+		header('Location: ../');
+	}
 ?>
 <html>
 <head>
 	<title>Praktikum 9</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../../assets/styles.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/bootstrap/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -22,35 +28,37 @@
 			<a href="#" onclick="showSideBar()">SideBar</a>
 		</div>
 		<ul id="menu">
-		  <li><a href="../../../index.php">Home</a></li>
+		  <li><a href="../../../../index.html">Home</a></li>
 		  <li><a class="active" href="praktikum.html">Praktikum</a></li>
-		  <li><a href="../saran.html">Saran</a></li>
+		  <li><a href="../../saran.html">Saran</a></li>
 		</ul>
 	</div>
 	<div id="id2">
 		<ul id="sidebar" class="mt-2">
-		  <li><a href="../praktikum.html">Praktikum1</a></li>
+		  <li><a href="../../praktikum.html">Praktikum1</a></li>
 		  <li><a href="#praktikum2.html">Praktikum2</a></li>
 		  <li><a href="#praktikum3.html">Praktikum3</a></li>
-		  <li><a href="../praktikum4.html">Praktikum4</a></li>
+		  <li><a href="../../praktikum4.html">Praktikum4</a></li>
 		  <li><a href="#praktikum5.html">Praktikum5</a></li>
-		  <li><a href="../praktikum6.html">Praktikum6</a></li>
-		  <li><a href="../praktikum7.php">Praktikum7</a></li>
-		  <li><a href="../praktikum8.php">Praktikum8</a></li>
-		  <li><a class="active" href="../praktikum9/">Praktikum9</a></li>
+		  <li><a href="../../praktikum6.html">Praktikum6</a></li>
+		  <li><a href="../../praktikum7.php">Praktikum7</a></li>
+		  <li><a href="../../praktikum8.php">Praktikum8</a></li>
+		  <li><a href="../../praktikum9/">Praktikum9</a></li>
 		  <li><a href="#praktikum">Praktikum10</a></li>
 		  <li><a href="#praktikum">Praktikum11</a></li>
-		  <li><a href="../praktikum12/">Praktikum12</a></li>
+		  <li><a class="active" href="index.php">Praktikum12</a></li>
 		</ul>
 	</div>
 
 	<div id="content" class="contentPrak">
+		<h3 class="mt-4">Selamat datang, <?= $_SESSION['nama'];?></h3>
 		<a href="insert-data.php" class="mt-4 btn btn-dark">Add Data</a>
+		<a href="logout.php" class="mt-4 btn btn-secondary">Logout</a>
 		<?php foreach($result as $res) :?>
         <div class="mt-3 card bg-light">
             <div class="row text-center p-3">
                 <div class="col-sm-12">
-                    <img width="200em" alt="<?=$res['nama']?>" src="img/<?= $res['img']?>"
+                    <img width="200em" alt="<?= $res["nama"]?>" src="../../praktikum9/img/<?= $res['img']?>"
                         class="rounded-circle img-fluid">
                 </div>
                 <div class="col-sm-12">

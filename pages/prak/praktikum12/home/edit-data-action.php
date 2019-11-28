@@ -1,6 +1,7 @@
 <?php
-    include "koneksi.php";
+    include 'koneksi.php';
 
+    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $role = $_POST['role'];
     $available = $_POST['available'];
@@ -9,7 +10,7 @@
     $year = $_POST['year'];
     $email = $_POST['email'];
     $pass = md5($_POST['password']);
-
+    
     $img=$_FILES['img'];
     if(isset($img)){
         $ext=pathinfo($img['name'], PATHINFO_EXTENSION);
@@ -20,32 +21,20 @@
             exit();
         }
 
-        move_uploaded_file($img['tmp_name'],"img/$filename");
+        move_uploaded_file($img['tmp_name'],"../../praktikum9/img/$filename");
     }
 
-    mysqli_query($koneksi, "INSERT INTO user
-    (
-        nama,
-        role,
-        available,
-        age,
-        location,
-        year,
-        email,
-        img,
-        password
-    ) VALUE
-    (
-        '$nama',
-        '$role',
-        '$available',
-        '$age',
-        '$location',
-        '$year',
-        '$email',
-        '$filename',
-        '$pass'
-    )");
+    mysqli_query($koneksi, "UPDATE user SET 
+    nama = '$nama',
+    role = '$role',
+    available = '$available',
+    age = $age,
+    location = '$location',
+    year = '$year',
+    email = '$email',
+    password = '$pass',
+    img = '$filename' WHERE id = $id
+    ");
 
     header('Location: index.php');
 ?>
