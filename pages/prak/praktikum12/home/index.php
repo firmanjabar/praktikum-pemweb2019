@@ -44,8 +44,8 @@
 		  <li><a href="../../praktikum7.php">Praktikum7</a></li>
 		  <li><a href="../../praktikum8.php">Praktikum8</a></li>
 		  <li><a href="../../praktikum9/">Praktikum9</a></li>
-		  <li><a href="#praktikum">Praktikum10</a></li>
-		  <li><a href="#praktikum">Praktikum11</a></li>
+		  <li><a href="../../praktikum10.html">Praktikum10</a></li>
+		  <li><a href="../../praktikum11.html">Praktikum11</a></li>
 		  <li><a class="active" href="index.php">Praktikum12</a></li>
 		</ul>
 	</div>
@@ -71,6 +71,7 @@
 					<!-- Button trigger modal -->
 					<a href="edit-data.php?id=<?= $res['id']?>" class="btn btn-primary">Edit Profile</a>
 					<a href="delete-data.php?id=<?= $res['id']?>" class="btn btn-danger">Delete Profile</a>
+					<a href="detail-profile.php?id=<?= $res['id']?>" class="btn btn-success">Detail Profile</a>
                 </div>
             </div>
         </div>

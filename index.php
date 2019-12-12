@@ -4,10 +4,12 @@ $nama = "Firman Abdul Jabar"
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Praktikum PemWeb 2019</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	
 </head>
 <body>
 
@@ -16,17 +18,17 @@ $nama = "Firman Abdul Jabar"
 			<a href="#" onclick="showMenu()">Menu</a>
 		</div>
 		<ul id="menu">
-		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a class="active" href="index.php">Home</a></li>
 		  <li><a href="pages/prak/praktikum.html">Praktikum</a></li>
 		  <li><a href="pages/saran.html">Saran</a></li>
 		</ul>
 	</div>
 
 	<div id="content" class="content">
-		<h2 style="text-align: center;">About <?= $nama ?></h2>
+		<h2 class="m-3" style="text-align: center;">About <?= $nama ?></h2>
 		<hr>
 		<img class="imgCenter" src="https://loremflickr.com/250/150">
-		<p>
+		<p class="mt-3">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

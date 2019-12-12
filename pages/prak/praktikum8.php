@@ -18,11 +18,13 @@ $movie = array
 
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Praktikum 4</title>
+	<title>Praktikum 8</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../../assets/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css">
 	<style type="text/css">
 		/* The Modal (background) */
 		.modal {
@@ -98,6 +100,7 @@ $movie = array
 		}
 	</style>
 </head>
+
 <body>
 	<div id="id">
 		<div class="menu_mobile">
@@ -107,34 +110,38 @@ $movie = array
 			<a href="#" onclick="showSideBar()">SideBar</a>
 		</div>
 		<ul id="menu">
-		  <li><a href="../../index.html">Home</a></li>
-		  <li><a class="active" href="praktikum.html">Praktikum</a></li>
-		  <li><a href="../saran.html">Saran</a></li>
+			<li><a href="../../index.php">Home</a></li>
+			<li><a class="active" href="praktikum.html">Praktikum</a></li>
+			<li><a href="../saran.html">Saran</a></li>
 		</ul>
 	</div>
 	<div id="id2">
 		<ul id="sidebar">
-		<li><a href="praktikum.html">Praktikum1</a></li>
-		  <li><a href="#praktikum2.html">Praktikum2</a></li>
-		  <li><a href="#praktikum3.html">Praktikum3</a></li>
-		  <li><a href="praktikum4.html">Praktikum4</a></li>
-		  <li><a href="#praktikum5.html">Praktikum5</a></li>
-		  <li><a href="praktikum6.html">Praktikum6</a></li>
-		  <li><a href="praktikum7.php">Praktikum7</a></li>
-		  <li><a class="active" href="../praktikum8.php">Praktikum8</a></li>
-		  <li><a href="index.php">Praktikum9</a></li>
+			<li><a href="praktikum.html">Praktikum1</a></li>
+			<li><a href="praktikum2.html">Praktikum2</a></li>
+			<li><a href="praktikum3.html">Praktikum3</a></li>
+			<li><a href="praktikum4.html">Praktikum4</a></li>
+			<li><a href="praktikum5.html">Praktikum5</a></li>
+			<li><a href="praktikum6.html">Praktikum6</a></li>
+			<li><a href="praktikum7.php">Praktikum7</a></li>
+			<li><a class="active" href="praktikum8.php">Praktikum8</a></li>
+			<li><a href="praktikum9/">Praktikum9</a></li>
+			<li><a href="praktikum10.html">Praktikum10</a></li>
+			<li><a href="praktikum11.html">Praktikum11</a></li>
+			<li><a href="praktikum12/">Praktikum12</a></li>
 		</ul>
 	</div>
 
-	<div id="content" class="contentPrak">
-	    <h2>My Products</h2>
-	 
+	<div id="content" class="contentPrak pt-3" style="height:1000px;">
+		<h2>Praktikum 8 - Daftar Product mengunakan PHP</h2>
+		<hr>
+		<h4>Movies</h4>
 	    <div id="card">
 	    	<div id="myBtn">
 	    	<?php for ($row = 0; $row < count($movie); $row++) :?>
 			        <div class="thumbnail" onclick="myFunction(<?= $row;?>)">
 					  	<img src="<?= $movie[$row][3]?>">
-						<h3><?= $movie[$row][0]?></h3>
+						<h6><?= $movie[$row][0]?></h6>
 						<p>Rating: <?= $movie[$row][1]?></p>
 					</div>
 			<?php endfor;?>
@@ -195,11 +202,15 @@ $movie = array
 
 	function myFunction(index){
 		// console.log(i)
-		var title = ["Maleficent: Mistress of Evil","Terminator: Dark Fate","Fast & Furious Presents: Hobbs & Shaw","Spider-Man: Far From Home","Joker", "The Lion King","Gemini Man", "IT: Chapter 2"];
-		var rating = [7.3,6.5,6.5,7.6,"8,7", "7,1", "5,9", "7"];
+		var title = ["Maleficent: Mistress of Evil","Terminator: Dark Fate","Fast & Furious Presents: Hobbs & Shaw","Spider-Man: Far From Home","Joker", "The Lion King","Gemini Man", "IT: Chapter 2","Joker", "The Lion King","Gemini Man", "IT: Chapter 2"];
+		var rating = [7.3,6.5,6.5,7.6,"8,7", "7,1", "5,9", "7","8,7", "7,1", "5,9", "7"];
 		var desc = ["Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play.","More than two decades have passed since Sarah Connor prevented Judgment Day, changed the future, and re-wrote the fate of the human race. Dani Ramos is living a simple life in Mexico City with her brother and father when a highly advanced and deadly new Terminator – a Rev-9 – travels back through time to hunt and kill her. Dani's survival depends on her joining forces with two warriors: Grace, an enhanced super-soldier from the future, and a battle-hardened Sarah Connor. As the Rev-9 ruthlessly destroys everything and everyone in its path on the hunt for Dani, the three are led to a T-800 from Sarah’s past that may be their last best hope.",
 		"Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have swapped smacks and bad words. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, both join forces to defeat him. (A spin-off of “The Fate of the Furious,” focusing on Johnson's Luke Hobbs and Statham's Deckard Shaw.)",
 		"Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+		"During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+		"Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+		"Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
+		"27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call.",
 		"During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
 		"Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
 		"Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
@@ -213,13 +224,17 @@ $movie = array
 		"https://image.tmdb.org/t/p/w500/nRXO2SnOA75OsWhNhXstHB8ZmI3.jpg",
 		"https://image.tmdb.org/t/p/w500/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
 		"https://image.tmdb.org/t/p/w500/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
+		"https://image.tmdb.org/t/p/w500/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg", 
+		"https://image.tmdb.org/t/p/w500/nRXO2SnOA75OsWhNhXstHB8ZmI3.jpg",
+		"https://image.tmdb.org/t/p/w500/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
+		"https://image.tmdb.org/t/p/w500/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
 		];
 
 		var text2 = "";
 
 		text2 += `
 	  	<img src="${img[index]}">
-		<h2>${title[index]}</h2>
+		<h6>${title[index]}</h6>
 		<p>Rating: ${rating[index]}</p>
 		<caption>${desc[index]}</caption>
 		` 

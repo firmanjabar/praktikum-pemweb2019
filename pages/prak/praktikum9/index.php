@@ -38,13 +38,21 @@
 		  <li><a href="../praktikum7.php">Praktikum7</a></li>
 		  <li><a href="../praktikum8.php">Praktikum8</a></li>
 		  <li><a class="active" href="../praktikum9/">Praktikum9</a></li>
-		  <li><a href="#praktikum">Praktikum10</a></li>
-		  <li><a href="#praktikum">Praktikum11</a></li>
+		  <li><a href="../praktikum10.html">Praktikum10</a></li>
+		  <li><a href="../praktikum11.html">Praktikum11</a></li>
 		  <li><a href="../praktikum12/">Praktikum12</a></li>
 		</ul>
 	</div>
 
 	<div id="content" class="contentPrak">
+		<h2 class="pt-3">Praktikum 9 - PHP Lanjut</h2>
+		<hr>
+		<p>Membuat database, membuat tabel pada database dengan php
+			menampilkan data dr DB ke browser dengan
+			menggunakan kode PHP.
+		</p>
+		<hr>
+		<h4>Konten di bawah adalah <strong>Hasil Praktikum 9, 10 & 11</strong></h4>
 		<a href="insert-data.php" class="mt-4 btn btn-dark">Add Data</a>
 		<?php foreach($result as $res) :?>
         <div class="mt-3 card bg-light">

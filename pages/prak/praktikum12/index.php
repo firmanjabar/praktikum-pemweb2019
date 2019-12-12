@@ -27,7 +27,7 @@
 ?>
 <html>
 <head>
-	<title>Praktikum 9</title>
+	<title>Praktikum 12</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../../assets/styles.css">
@@ -61,14 +61,16 @@
 		  <li><a href="../praktikum7.php">Praktikum7</a></li>
 		  <li><a href="../praktikum8.php">Praktikum8</a></li>
 		  <li><a href="../praktikum9/">Praktikum9</a></li>
-		  <li><a href="#praktikum">Praktikum10</a></li>
-		  <li><a href="#praktikum">Praktikum11</a></li>
+		  <li><a href="../praktikum10.html">Praktikum10</a></li>
+		  <li><a href="../praktikum11.html">Praktikum11</a></li>
 		  <li><a class="active" href="index.php">Praktikum12</a></li>
 		</ul>
 	</div>
 
 	<div id="content" class="contentPrak">
-        <?= $print;?>
+		<?= $print;?>
+		<h2 class="pt-3">Praktikum 12 - Login (Cookies & Session)</h2>
+		<hr>
         <div class="mt-3 card bg-light">
             <div class="row text-center p-3">
                 <div class="col-sm-12">

@@ -1,5 +1,5 @@
 <?php
-    include 'koneksi.php';
+    include '../praktikum9/koneksi.php';
     session_start();
 
     $user = $_POST['email'];

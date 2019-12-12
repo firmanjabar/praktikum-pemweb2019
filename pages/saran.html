@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Saran</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0" >
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/styles.css">
 </head>
+
 <body>
 	<div id="id">
 		<div class="menu_mobile">
 			<a href="#" onclick="showMenu()">Menu</a>
 		</div>
 		<ul id="menu">
-		  <li><a href="../index.html">Home</a></li>
-		  <li><a href="prak/praktikum.html">Praktikum</a></li>
-		  <li><a class="active" href="saran.html">Saran</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="prak/praktikum.html">Praktikum</a></li>
+			<li><a class="active" href="saran.html">Saran</a></li>
 		</ul>
 	</div>
 
@@ -22,19 +24,20 @@
 		<h1>Ini halaman saran</h1>
 	</div>
 
-<script>
-	function showMenu() {
-		var menu = document.getElementById("menu");
-		var box = document.getElementById("content");
+	<script>
+		function showMenu() {
+			var menu = document.getElementById("menu");
+			var box = document.getElementById("content");
 
-		if (menu.style.display === "block") {
-			menu.style.display = "none";
-			box.style.paddingTop = "0px";
-		}else{
-			menu.style.display = "block";
-			box.style.paddingTop = "125px";
+			if (menu.style.display === "block") {
+				menu.style.display = "none";
+				box.style.paddingTop = "0px";
+			} else {
+				menu.style.display = "block";
+				box.style.paddingTop = "125px";
+			}
 		}
-	}
-</script>
+	</script>
 </body>
+
 </html>
