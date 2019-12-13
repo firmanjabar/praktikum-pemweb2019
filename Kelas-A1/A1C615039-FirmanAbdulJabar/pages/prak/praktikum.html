@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Praktikum 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../assets/styles.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div id="id">
+		<div class="menu_mobile">
+			<a href="#" onclick="showMenu()">Menu</a>
+		</div>
+		<div class="sidebar_mobile">
+			<a href="#" onclick="showSideBar()">SideBar</a>
+		</div>
+		<ul id="menu">
+			<li><a href="../../index.php">Home</a></li>
+			<li><a class="active" href="praktikum.html">Praktikum</a></li>
+			<li><a href="../saran.html">Saran</a></li>
+		</ul>
+	</div>
+	<div id="id2">
+		<ul id="sidebar">
+			<li><a class="active" href="praktikum.html">Praktikum1</a></li>
+			<li><a href="praktikum2.html">Praktikum2</a></li>
+			<li><a href="praktikum3.html">Praktikum3</a></li>
+			<li><a href="praktikum4.html">Praktikum4</a></li>
+			<li><a href="praktikum5.html">Praktikum5</a></li>
+			<li><a href="praktikum6.html">Praktikum6</a></li>
+			<li><a href="praktikum7.php">Praktikum7</a></li>
+			<li><a href="praktikum8.php">Praktikum8</a></li>
+			<li><a href="praktikum9/">Praktikum9</a></li>
+			<li><a href="praktikum10.html">Praktikum10</a></li>
+			<li><a href="praktikum11.html">Praktikum11</a></li>
+			<li><a href="praktikum12/">Praktikum12</a></li>
+		</ul>
+	</div>
+
+	<div id="content" class="contentPrak pt-3" style="height:1000px;">
+		<h2>Praktikum 1 - Membuat HTML Dasar</h2>
+		<hr>
+		<h1>This is heading 1</h1>
+		<h2>This is heading 2</h2>
+		<h3>This is heading 3</h3>
+		<h4>This is heading 4</h4>
+		<h5>This is heading 5</h5>
+		<h6>This is heading 6</h6>
+		<br><br>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+		<br><br>
+		<h2>HTML Links</h2>
+		<p>HTML links are defined with the a tag:</p>
+		<a href="https://www.w3schools.com">This is a link</a>
+		<br><br>
+		<h2>HTML Images</h2>
+		<p>HTML images are defined with the img tag:</p>
+		<img width="50%" src="https://www.w3schools.com/w3css_templates.jpg" alt="W3Schools.com" width="104">
+		<br><br>
+		<h2>HTML Buttons</h2>
+		<p>HTML buttons are defined with the button tag:</p>
+		<button>Click me</button>
+		<br><br>
+		<h2>An Unordered HTML List</h2>
+		<ul>
+			<li>Coffee</li>
+			<li>Tea</li>
+			<li>Milk</li>
+		</ul>
+		<h2>An Ordered HTML List</h2>
+		<ol>
+			<li>Coffee</li>
+			<li>Tea</li>
+			<li>Milk</li>
+		</ol>
+		<br><br>
+
+	</div>
+
+	<script>
+		function showMenu() {
+			var menu = document.getElementById("menu");
+			var box = document.getElementById("content");
+			var menu2 = document.getElementById("sidebar");
+
+			if (menu.style.display === "block") {
+				menu.style.display = "none";
+				box.style.paddingTop = "0px";
+				menu2.style.display = "none";
+			} else {
+				menu.style.display = "block";
+				menu.style.position = "relative";
+				box.style.paddingTop = "150px";
+				menu2.style.display = "none";
+			}
+		}
+
+		function showSideBar() {
+			var menu = document.getElementById("sidebar");
+			var box = document.getElementById("content");
+			var menu2 = document.getElementById("menu");
+
+			if (menu.style.display === "block") {
+				menu.style.display = "none";
+				menu2.style.display = "none";
+			} else {
+				menu.style.display = "block";
+				menu.style.position = "sticky";
+				menu2.style.display = "none";
+				box.style.paddingTop = "0px";
+			}
+		}
+	</script>
+</body>
+
+</html>
