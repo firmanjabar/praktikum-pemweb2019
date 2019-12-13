@@ -64,4 +64,22 @@ Email : [azizanasrina@gmail.com](mailto:azizanasrina@gmail.com) | [firmanabdulja
 
 ---
 
+### Tutorial Hosting
+
+1. Buka link penyedia hosting seperti __[infinityfree.net](https://infinityfree.net/)__ , __[id.000webhost.com](https://id.000webhost.com)__ atau yang web hosting lainnya. Pada kesempatan kali ini, kita akan menggunakan __infinityfree__.
+2. Lakukan registrasi atau login, jika sudah memiliki akun.
+![1](https://pbs.twimg.com/media/ELoWNHDUEAAqcoc?format=jpg&name=large)
+3. Klik pada bagian __"New Account"__ di sebeleah kiri, isi bagian Nama domain, klik tombol hiaju di bawahnya untuk melanjutkan ke tahap 2. Di tahap kedua isi bagian password dan centang saya bukan robot, next lanjutkan sampai tahap ke 3.
+![2](https://pbs.twimg.com/media/ELoWNHEUcAAMn2K?format=jpg&name=large)
+4. Masuk ke halaman Akun yg sudah dibuat tunggu beberapa saat lalu refresh sampai status __active__.
+![3](https://pbs.twimg.com/media/ELoWNHDUwAA8lBJ?format=jpg&name=large)
+5. Klik __control panel__, lalu pilih __MySQL Databases__ untuk membuat database. Masukkan nama database, lalu create database. klik Tombol admin, untuk masuk kehalaman phpmyadmin. lalu lakukan import database seperti biasa, dengan data yang telah dibuat sebelumnya.
+![4](https://pbs.twimg.com/media/ELoZerAUYAAompO?format=jpg&name=large)
+6. Selanjutnya masuk ke __Online File Manager__, lalu upload semua berkas folder dr project kalian ke __folder htdocs__ yg ada di server.
+![5](https://pbs.twimg.com/media/ELoZerBVAAAjRG0?format=jpg&name=large)
+7. Ganti isi dari __file koneksi__ dengan data yg ada dari __MySQLdatabases (localhost, username, db_name)__. Untuk __isian Password__ ada dibagian halaman utama, click __show__ password.
+![6](https://pbs.twimg.com/media/ELoZerCVUAApFbS?format=png&name=large)
+
+---
+
 ###### tags: `HTML` `CSS` `JavaScript` `PHP` `MySQL`
